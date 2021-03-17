@@ -32,3 +32,4 @@ pySmartDL
 hurry.filesize
 fonttools
 tgcrypto
+pytz

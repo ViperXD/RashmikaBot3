@@ -88,6 +88,7 @@ if ENV:
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', False))
     SUPPORT_CHAT = os.environ.get('SUPPORT_CHAT', False)
     tbot = TelegramClient(None, API_KEY, API_HASH)
+    client = TelegramClient("saitama", API_ID, API_HASH)
 
 else:
     from RashmikaBot.config import Development as Config

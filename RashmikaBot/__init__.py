@@ -173,7 +173,7 @@ WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
 TIGER_USERS = list(TIGER_USERS)
 SPAMMERS = list(SPAMMERS)
-DEMONS = list(DEMONS)+ list(OWNER_ID)
+DEMONS = list(DEMONS)
 
 # Load at end to ensure all prev variables have been set
 from RashmikaBot.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, CustomMessageHandler

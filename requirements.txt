@@ -31,3 +31,4 @@ git+https://github.com/ALENTL/bing_image_downloader
 pySmartDL
 hurry.filesize
 fonttools
+tgcrypto

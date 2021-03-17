@@ -127,6 +127,11 @@
          "description": "get this from my.telegram.org",
          "required": true,
          "value": ""
+      },
+      "TEMP_DOWNLOAD_DIRECTORY": {
+         "description": "Do not change the value",
+         "required": true,
+         "value": "./DOWNLOADS"
       }
    },
    "keywords": [

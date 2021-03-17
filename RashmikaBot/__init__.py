@@ -85,6 +85,7 @@ if ENV:
     API_WEATHER  = os.environ.get('API_OPENWEATHER',False)
     AI_API_KEY = os.environ.get('AI_API_KEY', None)
     WALL_API = os.environ.get('WALL_API', None)
+    TEMP_DOWNLOAD_DIRECTORY = os.environ.get('TEMP_DOWNLOAD_DIRECTORY', None)
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', False))
     SUPPORT_CHAT = os.environ.get('SUPPORT_CHAT', False)
     tbot = TelegramClient(None, API_KEY, API_HASH)
@@ -157,6 +158,7 @@ else:
     WALL_API = Config.WALL_API
     STRICT_GMUTE = Config.STRICT_GMUTE
     SUPPORT_CHAT = Config.SUPPORT_CHAT
+    TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
 
     
 

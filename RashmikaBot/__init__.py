@@ -4,7 +4,6 @@ import sys
 import time
 import telegram.ext as tg
 from telethon import TelegramClient
-from RashmikaBot import *
 
 StartTime = time.time()
 
@@ -153,6 +152,8 @@ else:
     WALL_API = Config.WALL_API
     STRICT_GMUTE = Config.STRICT_GMUTE
     SUPPORT_CHAT = Config.SUPPORT_CHAT
+    API_KEY = Config.API_KEY
+    API_HASH = Config.API_HASH
     
 
 SUDO_USERS.add(OWNER_ID)

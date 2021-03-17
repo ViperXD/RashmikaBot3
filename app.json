@@ -107,6 +107,16 @@
          "description": "Setting this will enable demons",
          "required": false,
          "value": ""
+      },
+      "MESSAGE_DUMP": {
+         "description": "A private group id",
+         "required": false,
+         "value": ""
+      },
+      "SUPPORT_CHAT": {
+         "description": "The official group where you want to set",
+         "required": false,
+         "value": ""
       }
    },
    "keywords": [

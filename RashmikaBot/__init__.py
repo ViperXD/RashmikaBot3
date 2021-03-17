@@ -72,7 +72,7 @@ if ENV:
     DB_URI = os.environ.get('DATABASE_URL')
     DONATION_LINK = os.environ.get('DONATION_LINK')
     API_KEY = os.environ.get('API_KEY', None)
-    API_KEY = os.environ.get('API_HASH', None)
+    API_HASH = os.environ.get('API_HASH', None)
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
@@ -137,6 +137,8 @@ else:
     URL = Config.URL
     PORT = Config.PORT
     CERT_PATH = Config.CERT_PATH
+    API_KEY = Config.API_KEY
+    API_HASH = Config.API_HASH
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     DONATION_LINK = Config.DONATION_LINK
@@ -154,8 +156,7 @@ else:
     WALL_API = Config.WALL_API
     STRICT_GMUTE = Config.STRICT_GMUTE
     SUPPORT_CHAT = Config.SUPPORT_CHAT
-    API_KEY = Config.API_KEY
-    API_HASH = Config.API_HASH
+
     
 
 SUDO_USERS.add(OWNER_ID)

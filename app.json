@@ -117,6 +117,16 @@
          "description": "The official group where you want to set",
          "required": false,
          "value": ""
+      },
+      "API_KEY": {
+         "description": "get this from my.telegram.org",
+         "required": true,
+         "value": ""
+      },
+      "API_HASH": {
+         "description": "get this from my.telegram.org",
+         "required": true,
+         "value": ""
       }
    },
    "keywords": [

@@ -71,6 +71,8 @@ if ENV:
 
     DB_URI = os.environ.get('DATABASE_URL')
     DONATION_LINK = os.environ.get('DONATION_LINK')
+    API_KEY = os.environ.get('API_KEY', None)
+    API_KEY = os.environ.get('API_HASH', None)
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))

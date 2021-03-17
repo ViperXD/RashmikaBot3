@@ -4,6 +4,7 @@ import sys
 import time
 import telegram.ext as tg
 from telethon import TelegramClient
+from RashmikaBot import *
 
 StartTime = time.time()
 

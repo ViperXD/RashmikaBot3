@@ -2,10 +2,7 @@ import base64
 from io import BytesIO
 from PIL import Image
 from telegram import Message, Update, Bot, User
-from telegram.ext import (CallbackContext, CommandHandler, Filters,
-                          MessageHandler, run_async)
-
-from telegram.ext import Filters, MessageHandler, run_async
+from telegram.ext import (CallbackContext, CommandHandler, Filters, MessageHandler, run_async)
 from RashmikaBot.modules.helper_funcs.extraction import extract_user_and_text
 from RashmikaBot.modules.disable import DisableAbleCommandHandler
 from RashmikaBot import dispatcher

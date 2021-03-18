@@ -3,7 +3,6 @@ import os
 import sys
 import time
 import telegram.ext as tg
-from SaitamaRobot import Development as Config
 
 StartTime = time.time()
 

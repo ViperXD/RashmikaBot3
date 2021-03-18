@@ -1,4 +1,4 @@
-from tg_bot import dispatcher
+from RashmikaBot import dispatcher
 
 RUN_STRINGS = (
     "Куда ты собрался?",

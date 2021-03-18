@@ -10,7 +10,7 @@ import RashmikaBot.modules.sql.blacklistusers_sql as sql
 from RashmikaBot import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, WHITELIST_USERS, SUPPORT_USERS
 from RashmikaBot.modules.helper_funcs.chat_status import dev_plus
 from RashmikaBot.modules.helper_funcs.extraction import extract_user_and_text, extract_user
-from tg_bRashmikaBotot.modules.log_channel import gloggable
+from RashmikaBot.modules.log_channel import gloggable
 
 BLACKLISTWHITELIST = [OWNER_ID] + DEV_USERS + SUDO_USERS + WHITELIST_USERS + SUPPORT_USERS
 BLABLEUSERS = [OWNER_ID] + DEV_USERS

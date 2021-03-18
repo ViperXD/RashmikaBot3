@@ -25,7 +25,7 @@ class AntiSpam:
             + (DRAGONS or [])
             + (WOLVES or [])
             + (DEMONS or [])
-            + (TIGERS _USERS or [])
+            + (TIGERS_USERS or [])
         )
         # Values are HIGHLY experimental, its recommended you pay attention to our commits as we will be adjusting the values over time with what suits best.
         Duration.CUSTOM = 15  # Custom duration, 15 seconds

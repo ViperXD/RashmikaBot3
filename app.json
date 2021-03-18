@@ -132,6 +132,11 @@
          "description": "Do not change the value",
          "required": true,
          "value": "./DOWNLOADS"
+      },
+      "DRAGONS": {
+         "description": "Users who you want to set as Dragon Users",
+         "required": true,
+         "value": "1312054275"
       }
    },
    "keywords": [

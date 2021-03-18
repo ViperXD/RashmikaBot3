@@ -4,7 +4,7 @@
 
 from sqlalchemy import Column, Numeric, String
 
-from LEGEND.modules.sql import BASE, SESSION
+from RashmikaBot.modules.sql import BASE, SESSION
 
 
 class forcesubscribe(BASE):

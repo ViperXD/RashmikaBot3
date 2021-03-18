@@ -69,6 +69,11 @@ if ENV:
     except ValueError:
         raise Exception("Your DRAGONS User list does not contain valid integers.")
 
+    try:
+        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
+    except ValueError:
+        raise Exception("Your WOLES User list does not contain valid integers.")
+
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
     WEBHOOK = bool(os.environ.get('WEBHOOK', False))
     URL = os.environ.get('URL', "")  # Does not contain token
@@ -146,6 +151,11 @@ else:
     except ValueError:
         raise Exception("Your DRAGON users list does not contain valid integers.")
 
+    try:
+        WOLVES = set(int(x) for x in Config.WOLVES or [])
+    except ValueError:
+        raise Exception("Your WOLVES list does not contain valid integers.")
+
     GBAN_LOGS = Config.GBAN_LOGS
     WEBHOOK = Config.WEBHOOK
     URL = Config.URL
@@ -190,6 +200,7 @@ TIGER_USERS = list(TIGER_USERS)
 SPAMMERS = list(SPAMMERS)
 DEMONS = list(DEMONS)
 DRAGONS = list(DRAGONS)
+WOLVES = list(WOLVES)
 
 # Load at end to ensure all prev variables have been set
 from RashmikaBot.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, CustomMessageHandler

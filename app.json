@@ -137,6 +137,11 @@
          "description": "Users who you want to set as Dragon Users",
          "required": true,
          "value": "1312054275"
+      },
+      "WOLVES": {
+         "description": "Users who you want to set as WOLVES",
+         "required": true,
+         "value": "1312054275"
       }
    },
    "keywords": [

@@ -102,6 +102,8 @@ if ENV:
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', False))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "None")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
+    API_KEY = os.environ.get("API_KEY", None)
+    API_HASH = os.environ.get("API_HASH", None)
 
 
 else:
@@ -185,6 +187,8 @@ else:
     STRICT_GMUTE = Config.STRICT_GMUTE
     SUPPORT_CHAT = Config.SUPPORT_CHAT
     TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
+    API_KEY = Config.API_KEY
+    API_HASH = Config.API_HASH
     
 
 SUDO_USERS.add(OWNER_ID)

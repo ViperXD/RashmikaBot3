@@ -3,6 +3,7 @@ import os
 import sys
 import time
 import telegram.ext as tg
+from SaitamaRobot import Development as Config
 
 StartTime = time.time()
 
@@ -63,14 +64,19 @@ if ENV:
         raise Exception("Your DRAGONS users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in Config.DEMONS or [])
+        DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
     except ValueError:
         raise Exception("Your DEMONS users list does not contain")
 
     try:
-        WOLVES = set(int(x) for x in Config.WOLVES or [])
+        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
     except ValueError:
         raise Exception("Your WOLVES users list does not contain valid integers")
+
+    try:
+        TIGERS = set(int(x) for x in os.environ.get("TIGERS", "").split())
+    except ValueError:
+        raise Exception("Your TIGERS users list does not contain valid")
 
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
     WEBHOOK = bool(os.environ.get('WEBHOOK', False))
@@ -149,6 +155,11 @@ else:
         WOLVES = set(int(x) for x in Config.WOLVES or [])
     except ValueError:
         raise Exception("Your WOLVES users list does not contain valid integers.")
+
+    try:
+        TIGERS = set(int(x) for x in Config.TIGERS or [])
+    except ValueError:
+        raise Exception("Your TIGERS users list does not contain valid integers.")
 
     GBAN_LOGS = Config.GBAN_LOGS
     WEBHOOK = Config.WEBHOOK

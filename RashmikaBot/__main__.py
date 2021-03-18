@@ -24,7 +24,7 @@ from RashmikaBot.modules.helper_funcs.chat_status import is_user_admin
 from RashmikaBot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hi ALEN, my name is RASHMIKA MANDANNA! 
+Hi {}, my name is {}! 
 I am the group management bot of FOCUS MOVIES .. You guys can't use me or add me to groups.........
 """
 

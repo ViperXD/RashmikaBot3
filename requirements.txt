@@ -34,3 +34,4 @@ fonttools
 tgcrypto
 pytz
 urllib3
+hachoir

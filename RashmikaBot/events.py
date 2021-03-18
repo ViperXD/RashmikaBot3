@@ -1,5 +1,5 @@
 from telethon import events
-from RashmikaBot import client
+from RashmikaBot import tbot as client
 
 
 def register(**args):

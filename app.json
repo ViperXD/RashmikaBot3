@@ -142,6 +142,11 @@
          "description": "Users who you want to set as WOLVES",
          "required": true,
          "value": "1312054275"
+      },
+      "STRICT_GMUTE": {
+         "description": "State wherther true or false",
+         "required": true,
+         "value": "True"
       }
    },
    "keywords": [

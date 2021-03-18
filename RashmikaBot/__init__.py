@@ -4,6 +4,7 @@ import sys
 import time
 import telegram.ext as tg
 from telethon import TelegramClient
+from pyrogram import Client as RashmikaBot
 
 StartTime = time.time()
 
@@ -95,7 +96,7 @@ if ENV:
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', False))
     SUPPORT_CHAT = os.environ.get('SUPPORT_CHAT', False)
     tbot = TelegramClient(None, API_KEY, API_HASH)
-    client = Client("RashmikaBot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+    client = RashmikaBot("RashmikaBot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 else:
     from RashmikaBot.config import Development as Config

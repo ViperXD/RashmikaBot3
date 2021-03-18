@@ -35,3 +35,4 @@ tgcrypto
 pytz
 urllib3
 hachoir
+search_engine_parser

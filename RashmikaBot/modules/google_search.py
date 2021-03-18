@@ -1,77 +1,51 @@
-from bs4 import BeautifulSoup
-import urllib
-from RashmikaBot import tbot
-import glob
 import io
 import os
 import re
-import aiohttp
-import urllib.request
-from urllib.parse import urlencode
-
-import bs4
-import html2text
+import urllib
+from datetime import datetime
+from RashmikaBot import tbot
+from RashmikaBot.eventss import register
 import requests
-from bing_image_downloader import downloader
-from googleapiclient.discovery import build
+from bs4 import BeautifulSoup
 from PIL import Image
-from telethon import *
-from telethon.tl import functions
-from telethon.tl import types
-from telethon.tl.types import *
+from search_engine_parser import GoogleSearch
 
-from RashmikaBot import *
-
-from RashmikaBot.events import register
-
-async def is_register_admin(chat, user):
-    if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
-        return isinstance(
-            (
-                await tbot(functions.channels.GetParticipantRequest(chat, user))
-            ).participant,
-            (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
-        )
-    if isinstance(chat, types.InputPeerUser):
-        return True
-
-
-def google_search(search_term, api_key, cse_id, **kwargs):
-    service = build("customsearch", "v1", developerKey=api_key)
-    res = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
-    return res["items"]
-
+opener = urllib.request.build_opener()
+useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Mobile Safari/537.36"
+opener.addheaders = [("User-agent", useragent)]
 
 @register(pattern="^/google (.*)")
-async def _(event):
-    if event.fwd_from:
-        return
-    approved_userss = approved_users.find({})
-    for ch in approved_userss:
-        iid = ch["id"]
-        userss = ch["user"]
-    if event.is_group:
-        if await is_register_admin(event.input_chat, event.message.sender_id):
-            pass
-        elif event.chat_id == iid and event.sender_id == userss:
-            pass
-        else:
-            return
-    input_str = event.pattern_match.group(1)
-
-    my_api_key = GOOGLE_SRCH_VALUE
-    my_cse_id = GOOGLE_SRCH_KEY
-
-    results = google_search(input_str, my_api_key, my_cse_id, num=10)
-
-    output_str = " "
-    for result in results:
-        text = str(result["title"])
-        url = str(result["link"])
-        description = str(result["htmlSnippet"])
-        last = html2text.html2text(description)
-        output_str += "[{}]({})\n{}\n".format(text, url, last)
-
-    await event.reply(
-        "{}".format(output_str), link_preview=False, parse_mode="Markdown"
+async def gsearch(q_event):
+    k = await q_event.reply("Searching......")
+    match = q_event.pattern_match.group(1)
+    page = re.findall(r"page=\d+", match)
+    try:
+        page = page[0]
+        page = page.replace("page=", "")
+        match = match.replace("page=" + page[0], "")
+    except IndexError:
+        page = 1
+    search_args = (str(match), int(page))
+    gsearch = GoogleSearch()
+    gresults = await gsearch.async_search(*search_args)
+    msg = ""
+    for i in range(len(gresults["links"])):
+        try:
+            title = gresults["titles"][i]
+            link = gresults["links"][i]
+            desc = gresults["descriptions"][i]
+            msg += f"🇬[{title}]({link})\n{desc}\n\n"
+        except IndexError:
+            break
+    await k.edit(
+        "**Search Query:**\n" + match + "\n\n**Results:**\n" + msg, link_preview=False
     )
+
+
+file_help = os.path.basename(__file__)
+file_help = file_help.replace(".py", "")
+file_helpo = file_help.replace("_", " ")
+__mod_name__="Google Search"
+__help__="""
+ - /google
+"""

@@ -4,7 +4,7 @@ import re
 import urllib
 from datetime import datetime
 from RashmikaBot import tbot
-from RashmikaBot.eventss import register
+from RashmikaBot.events import register
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image

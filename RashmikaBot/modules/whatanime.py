@@ -1,3 +1,6 @@
+# usr/bin/coding/
+# -*- coding: utf-8 -*-
+# (c) ALEN TL
 
 import os
 import time
@@ -49,7 +52,7 @@ def calculate_eta(current, total, start_time):
     return ', '.join(thing)
 
 
-@pbot.on_message(filters.command('wa'))
+@tbot.on_message(filters.command('wa'))
 async def whatanime(c: Client, m: Message):
     media = m.photo or m.animation or m.video or m.document
     if not media:

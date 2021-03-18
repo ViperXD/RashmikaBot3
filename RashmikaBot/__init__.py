@@ -55,11 +55,6 @@ if ENV:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     try:
-        TIGER_USERS = set(int(x) for x in os.environ.get("TIGER_USERS", "").split())
-    except ValueError:
-        raise Exception("Your tiger users list does not contain valid integers.")
-
-    try:
         DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
     except ValueError:
         raise Exception("Your DEMONS User list does not contain valid integers.")
@@ -73,6 +68,11 @@ if ENV:
         WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
     except ValueError:
         raise Exception("Your WOLES User list does not contain valid integers.")
+
+    try:
+        TIGER_USERS = set(int(x) for x in os.environ.get("TIGER_USERS", "").split())
+    except ValueError:
+        raise Exception("Your tiger users list does not contain valid integers.")
 
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
     WEBHOOK = bool(os.environ.get('WEBHOOK', False))
@@ -196,7 +196,7 @@ SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
-TIGER_USERS = list(TIGER_USERS)
+TIGER_USERS = list(TIGER_USERS) + list(DEMONS)
 SPAMMERS = list(SPAMMERS)
 DEMONS = list(DEMONS)
 DRAGONS = list(DRAGONS)

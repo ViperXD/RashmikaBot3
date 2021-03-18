@@ -1,4 +1,3 @@
-
 import logging
 import os
 import sys
@@ -14,9 +13,9 @@ logging.basicConfig(
 
 LOGGER = logging.getLogger(__name__)
 
-# if version < 3.6, stop bot.
-if sys.version_info[0] < 3 or sys.version_info[1] < 6:
-    LOGGER.error("You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting.")
+# if version < 3.9, stop bot.
+if sys.version_info[0] < 3 or sys.version_info[1] < 9:
+    LOGGER.error("You MUST have a python version of at least 3.9! Multiple features depend on this. Bot quitting.")
     quit(1)
 
 ENV = bool(os.environ.get('ENV', False))
@@ -58,6 +57,21 @@ if ENV:
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
+    try:
+        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "").split())
+    except ValueError:
+        raise Exception("Your DRAGONS users list does not contain valid integers.")
+
+    try:
+        DEMONS = set(int(x) for x in Config.DEMONS or [])
+    except ValueError:
+        raise Exception("Your DEMONS users list does not contain")
+
+    try:
+        WOLVES = set(int(x) for x in Config.WOLVES or [])
+    except ValueError:
+        raise Exception("Your WOLVES users list does not contain valid integers")
+
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
     WEBHOOK = bool(os.environ.get('WEBHOOK', False))
     URL = os.environ.get('URL', "")  # Does not contain token
@@ -79,6 +93,8 @@ if ENV:
     AI_API_KEY = os.environ.get('AI_API_KEY', None)
     WALL_API = os.environ.get('WALL_API', None)
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', False))
+    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "None")
+    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
 
 
 else:
@@ -119,6 +135,21 @@ else:
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
+    try:
+        DRAGONS = set(int(x) for x in Config.DRAGONS or [])
+    except ValueError:
+        raise Exception("Your DRAGON users list does not contain valid integers.")
+
+    try:
+        DEMONS = set(int(x) for x in Config.DEMONS or [])
+    except ValueError:
+        raise Exception("Your DEMONS users list does not contain valid integers.")
+
+    try:
+        WOLVES = set(int(x) for x in Config.WOLVES or [])
+    except ValueError:
+        raise Exception("Your WOLVES users list does not contain valid integers.")
+
     GBAN_LOGS = Config.GBAN_LOGS
     WEBHOOK = Config.WEBHOOK
     URL = Config.URL
@@ -140,6 +171,8 @@ else:
     AI_API_KEY = Config.AI_API_KEY
     WALL_API = Config.WALL_API
     STRICT_GMUTE = Config.STRICT_GMUTE
+    SUPPORT_CHAT = Config.SUPPORT_CHAT
+    TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
     
 
 SUDO_USERS.add(OWNER_ID)
@@ -147,7 +180,7 @@ SUDO_USERS.add(1393551785)
 
 DEV_USERS.add(OWNER_ID)
 
-updater = tg.Updater(TOKEN, workers=WORKERS)
+updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 dispatcher = updater.dispatcher
 DEV_USERS.add(1393551785)
 SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
@@ -156,6 +189,10 @@ WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
 TIGER_USERS = list(TIGER_USERS)
 SPAMMERS = list(SPAMMERS)
+DEMONS = list(DEMONS)
+DRAGONS = list(DRAGONS)
+WOLVES = list(WOLVES)
+
 
 # Load at end to ensure all prev variables have been set
 from RashmikaBot.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, CustomMessageHandler

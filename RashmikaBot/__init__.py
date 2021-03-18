@@ -53,7 +53,7 @@ if ENV:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     try:
-        TIGERS_USERS = set(int(x) for x in os.environ.get("TIGERS_USERS", "").split())
+        TIGER_USERS = set(int(x) for x in os.environ.get("TIGER_USERS", "").split())
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
@@ -136,7 +136,7 @@ else:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     try:
-        TIGERS_USERS = set(int(x) for x in Config.TIGERS_USERS or [])
+        TIGER_USERS = set(int(x) for x in Config.TIGER_USERS or [])
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
@@ -197,7 +197,7 @@ SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
-TIGERS_USERS = list(TIGERS_USERS)
+TIGER_USERS = list(TIGER_USERS)
 SPAMMERS = list(SPAMMERS)
 DEMONS = list(DEMONS)
 DRAGONS = list(DRAGONS)

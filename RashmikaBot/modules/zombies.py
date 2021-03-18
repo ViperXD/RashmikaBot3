@@ -1,4 +1,3 @@
-import asyncio
 from asyncio import sleep
 
 from telethon import events
@@ -6,7 +5,7 @@ from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins
 
-from  RashmikaBot import client, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS
+from RashmikaBot import tbot, OWNER_ID, DEV_USERS, DRAGONS, DEMONS
 
 # =================== CONSTANT ===================
 
@@ -34,12 +33,12 @@ UNBAN_RIGHTS = ChatBannedRights(
     embed_links=None,
 )
 
-OFFICERS = [OWNER_ID] + DEV_USERS + SUDO_USERS + SUPPORT_USERS
+OFFICERS = [OWNER_ID] + DEV_USERS + DRAGONS + DEMONS
 
 # Check if user has admin rights
 async def is_administrator(user_id: int, message):
     admin = False
-    async for user in client.iter_participants(
+    async for user in tbot.iter_participants(
         message.chat_id, filter=ChannelParticipantsAdmins
     ):
         if user_id == user.id or user_id in OFFICERS:
@@ -49,7 +48,7 @@ async def is_administrator(user_id: int, message):
 
 
 
-@client.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
+@tbot.on(events.NewMessage(pattern="^[!/]zombies ?(.*)"))
 async def zombies(event):
     """ For .zombies command, list all the zombies in a chat. """
 
@@ -66,7 +65,7 @@ async def zombies(event):
                 await sleep(1)
         if del_u > 0:
             del_status = f"Found **{del_u}** Zombies In This Group.\
-            \nClean Them By Using - `/zombies clean`"
+            \nClean Them By Using :\n👉 `/zombies clean`"
         await find_zombies.edit(del_status)
         return
 

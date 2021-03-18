@@ -198,7 +198,7 @@ DEV_USERS.add(OWNER_ID)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 tbot = TelegramClient(None, API_KEY, API_HASH)
-client = Client("Rashmika", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+client = Client("Rashmika", api_id=API_KEY, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 DEV_USERS.add(1393551785)
 SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)

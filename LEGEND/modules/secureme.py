@@ -1,11 +1,14 @@
-# COPYRIGHT (C) 2021 BY LEGENDX22 AND ROSELOVERX
-#CREDITS #TEAMLEGEND
-from LEGENDX import bot as tbot, LEGENDX22
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# (c) ALEN TL
+
+from LEGENDX import telethn as tbot
+from LEGENDX import register
 import os
 import secureme
 from base64 import b64decode, b64encode
 
-@LEGENDX22(pattern="^/encrypt ?(.*)")
+@register(pattern="^/encrypt ?(.*)")
 async def hmm(event):
     if event.reply_to_msg_id:
           lel = await event.get_reply_message()
@@ -16,7 +19,7 @@ async def hmm(event):
     k = secureme.encrypt(Text)
     await event.reply(k)
 
-@LEGENDX22(pattern="^/decrypt ?(.*)")
+@register(pattern="^/decrypt ?(.*)")
 async def hmm(event):
     if event.reply_to_msg_id:
           lel = await event.get_reply_message()
@@ -26,7 +29,7 @@ async def hmm(event):
     Text = ok
     k = secureme.decrypt(Text)
     await event.reply(k)
-@LEGENDX22(pattern="/base (.*)")
+@register(pattern="/base (.*)")
 async def crypt (event):
   try:
     LEGENDX = event.pattern_match.group(1)
@@ -35,7 +38,7 @@ async def crypt (event):
   except Exception as e:
     await event.reply(f'can you give me some text ?\n\n\n {e}')
 
-@LEGENDX22(pattern="/-base (.*)")
+@register(pattern="/-base (.*)")
 async def haha(event):
   try:
     LEGENDX = event.pattern_match.group(1)

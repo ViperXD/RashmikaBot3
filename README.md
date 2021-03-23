@@ -1,27 +1,35 @@
-# RASHMIKA MANDANNA - A Telegram Bot Project
+# GRAND OFFICIAL 3.8
+ GRAND OFFICIAL VERSION 3.8 IS RELEASED 😎😎
 
-> ⭐️ Thanks to everyone who has starred the project, it means a lot !
+**You got any error contact me** 👇
+[LEGEND X](https://t.me/legendx22)
 
-##### Its a request to everyone who is using this free software and maintaining their own forks/imports from this repository to strictly comply with the LICENCE associated with this repository !<br /><br />If you are using an import your repository should contain a link to the [main repository](https://github.com/ALENTL/RashmikaBot3) in the README.
+# FORK FULL SUPPORT BY LEGEND X
+# ADD LEGEND X ON DEVLIST
+# PLEASE ADD 😶
+# LEGENDX ID `1100231654`
+<details>
+<summary> GRAND OFFICIAL </summary>
+<img src="https://telegra.ph/file/1830075084b76b1b1aa24.jpg" />
+</details>
+Please read this 👇
+<details>
+  <summary>Steps to deploy on Heroku !! </summary>
 
-[![AGPLv3 license](https://img.shields.io/badge/license-AGPL–3.0-red.svg)](https://www.gnu.org/licenses/agpl-3.0.en.html)
-[![CodeFactor](https://www.codefactor.io/repository/github/ALENTL/RashmikaBot3/badge)](https://www.codefactor.io/repository/github/ALENTL/RashmikaBot3)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FMissJuliaRobot%2FMissJuliaRobot.git)](https://github.com/ALENTL/RashmikaBot2)
-[![Website Status](https://img.shields.io/website-up-down-green-red/http/missjuliarobot.unaux.com.svg?label=website)](http://missjuliarobot.unaux.com)
-[![Total Size](https://github-size-badge.herokuapp.com/ALENTL/RashmikaBot3.svg)](https://github.com/ALENTL/RashmikaBot3)
-[![Python 3.9](https://img.shields.io/badge/python->=3.9.2-blue.svg)](https://www.python.org/downloads/release/python-383/)
-[![Maintenance](https://img.shields.io/badge/maintained-yes-yellow.svg)](https://github.com/ALENTL/RashmikaBot3)
+```
+ details, Deploy!
+1st fork kro fir main.py me changes kro fir heroku se manually deploy krlo
+Fir web ko off kro aur worker ko on kro fir agar koi error mile to
+Reveal config vars me jaao port ko delete krdo aur wheebook ko bhi the. WAIT 2-3 aur bot start🥰
+Deploy link 👇
+```
+# [DEPLOY HERE](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Flegendxop%2FLEGEND-X&template=https%3A%2F%2Fgithub.com%2Flegendxop%2FLEGEND-X)
+</details>
 
-**Blazingly fast Telegram Group Management Bot based on [Telethon](https://github.com/LonamiWebs/Telethon) coupled with [sqlalchemy](https://github.com/sqlalchemy/sqlalchemy)**
-
-Can be found on telegram as [RASHMIKA MANDANNA](https://t.me/midukkirashmika3_bot)
-
-Deploy Rashmika to Heroku:
-
-<p align="left"><a href="https://heroku.com/deploy?template=https://github.com/ALENTL/RashmikaBot3"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
-
-## Credits
-**Thanks to these projects which helped me a lot to make this awesome bot**
-
-- [ALEN TL](https://telegram.dog/ALEN_TL)
+<details>
+<summary> Credits ❤️ </summary>
+<b> Credits</b>
+<h1> LEGEND X </h1>
+<h1> PROBOY X </h1>
+<h1> TEAMLEGEND </h1>
+</details>

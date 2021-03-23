@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/RashmikaBot
-RUN git clone -b shiken https://github.com/ALENTL/RashmikaBot3 /root/RashmikaBot
-WORKDIR /root/RashmikaBot
+# Copy Python Requirements to /root/LEGEND
+RUN git clone -b legend https://github.com/LEGENDXOP/LEGEND-X /root/LEGEND
+WORKDIR /root/LEGEND
 
-#Copy config file to /root/RashmikaBot3/RashmikaBot
-COPY ./RashmikaBot/sample_config.py ./RashmikaBot/config.py* /root/RashmikaBot3/RashmikaBot/
+#Copy config file to /root/LEGEND/LEGEND
+COPY ./LEGEND/sample_config.py ./LEGEND/config.py* /root/LEGEND/LEGEND/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","RashmikaBot"]
+CMD ["python3","-m","LEGEND"]

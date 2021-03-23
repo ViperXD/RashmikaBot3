@@ -1,4 +1,14 @@
 {
+      "name": "GRAND OFFICIAL",
+      "description": "An OP Telegram UserBot.",
+      "keywords": [
+         "telegram",
+         "anime",
+         "group",
+         "manager",
+         "LEGEND"
+      ],   
+   "repository": "https://github.com/LEGENDXOP/LEGEND-X",
    "addons": [
       {
          "options": {
@@ -7,85 +17,125 @@
          "plan": "heroku-postgresql"
       }
    ],
-   "description": "Telegram group management bot.",
+   "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/python"
+    }     
+  ],      
    "env": {
-      "ALLOW_EXCL": {
-         "description": "Set this to True if you want ! to be a command prefix along with /",
-         "value": "True"
-      },
-      "BAN_STICKER": {
-         "description": "ID of the sticker you want to use when banning people.",
-         "required": false,
+      "TOKEN": {
+         "description": "Your bot token. Get one from @BotFather duh",
+         "required": true,
          "value": ""
       },
-      "DEL_CMDS": {
-         "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
-         "value": "True" 
+      "API_ID": {
+         "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
       },
-      "ENV": {
-         "description": "Setting this to ANYTHING will enable environment variables.",
-         "value": "ANYTHING"
-      },
+      "API_HASH": {
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
          "required": false,
          "value": "sqldbtype://username:pw@hostname:port/db_name"
-      },      
-      "OWNER_ID": {
-         "description": "Your user ID as an integer.",
-         "value": "123"
       },
-      "OWNER_USERNAME": {
-         "description": "Your username",
-         "value": "username"
-      },
-      "DEV_USERS": {
-         "description": "ID of users who are Dev (can use /py etc.)",
-         "required": false,
-         "value": "123"
-      },
-      "GBAN_LOGS": {
-         "description": "Gban log channel, include the hyphen too: ex: -123456",
-         "value": "-123"
-      },
-      "CASH_API_KEY": {
-         "description": "Required for currency converter",
-         "value": "-xyz"
-      },
-      "TIME_API_KEY": {
-         "description": "Required for timezone information",
-         "value": "HW6LQCYX43HS"
-      },
-      "AI_API_KEY": {
-         "description": "for activate chatbot",
-         "value": "x_y_z"
-      },
-      "API_OPENWEATHER": {
-         "description": "Required for weather information",
-         "value": "5c5adc2bc1832de6943e3f4467e84c39"
-      },
-      "PORT": {
-         "description": "Port to use for your webhooks.",
+      "HEROKU_API_KEY": {
+         "description": "Your api key please for updater",
          "required": false,
          "value": ""
       },
+      "HEROKU_APP_NAME": {
+         "description": "Your app name for updater",
+         "required": true,
+         "value": ""
+      },      
+      "OWNER_ID": {
+         "description": "Your user ID as an integer.",
+         "required": true,
+         "value": "1100231654"
+      },
+      "OWNER_USERNAME": {
+         "description": "Your username without the @",
+         "value": "LEGENDX22"
+      },
+      "SUPPORT_CHAT": {
+         "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to saitama support than consider you made an enemy.",
+         "required": true,
+         "value": "LEGEND_USERBOT_SUPPORT"
+      },
+      "EVENT_LOGS": {
+         "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
+         "required": true,
+         "value": "-123456798"
+      },
+      "JOIN_LOGGER": {
+         "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
+         "required": true,
+         "value": "-123456798"
+      },      
+      "CASH_API_KEY": {
+         "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
+         "required": true,
+         "value": "-xyz"
+      },
+      "TIME_API_KEY": {
+         "description": "Required for timezone information. Get yours from https://timezonedb.com/api",
+         "required": true,
+         "value": "-xyz"
+      },
+      "DEV_USERS": {
+         "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Legend support then keep the current ID's here at they are and add yours.",
+         "required": false,
+         "value": "1100231654"
+      },
+      "sw_api": {
+         "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
+         "required": false,
+         "value": ""
+      }, 
       "STRICT_GBAN": {
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
          "value": "True"
       },
-      "SUDO_USERS": {
+      "DRAGONS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": "123"
+         "value": "1100231654"
       },
-      "TIGER_USERS": {
+      "DEMONS": {
+         "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
+         "required": false,
+         "value": "1100231654"
+      },
+      "TIGERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
          "required": false,
-         "value": "123"
+         "value": "1100231654"
       },
-      "TOKEN": {
-         "description": "Your bot token.",
-         "required": true,
+      "WOLVES": {
+         "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
+         "required": false,
+         "value": "1100231654"
+      },
+      "ENV": {
+         "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
+         "value": "ANYTHING"
+      },
+      "WEBHOOK": {
+         "description": "Setting this to ANYTHING will enable webhooks. If you dont know how this works leave it as it is",
+         "required": false,
+         "value": ""
+      },
+      "PORT": {
+         "description": "Port to use for your webhooks. Better leave this as it is on heroku",
+         "required": false,
          "value": ""
       },
       "URL": {
@@ -93,69 +143,52 @@
          "required": false,
          "value": ""
       },
-      "WEBHOOK": {
-         "description": "Setting this to ANYTHING will enable webhooks.",
+      "No_LOAD": {
+         "description": "Dont load these modules cause they shit, space separation",
+         "required": false,
+         "value": "cleaner rss connection"
+      }, 
+      "BL_CHATS": {
+         "description": "List of chats you want blacklisted.",
          "required": false,
          "value": ""
       },
-      "WHITELIST_USERS": {
-         "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
-         "required": false,
-         "value": "123"
-      },
-      "DEMONS": {
-         "description": "Setting this will enable demons",
-         "required": false,
-         "value": ""
-      },
-      "MESSAGE_DUMP": {
-         "description": "A private group id",
-         "required": false,
-         "value": ""
-      },
-      "SUPPORT_CHAT": {
-         "description": "The official group where you want to set",
-         "required": false,
-         "value": ""
-      },
-      "API_KEY": {
-         "description": "get this from my.telegram.org",
-         "required": true,
-         "value": ""
-      },
-      "API_HASH": {
-         "description": "get this from my.telegram.org",
-         "required": true,
-         "value": ""
-      },
-      "TEMP_DOWNLOAD_DIRECTORY": {
-         "description": "Do not change the value",
-         "required": true,
-         "value": "./DOWNLOADS"
-      },
-      "DRAGONS": {
-         "description": "Users who you want to set as Dragon Users",
-         "required": true,
-         "value": "1312054275"
-      },
-      "WOLVES": {
-         "description": "Users who you want to set as WOLVES",
-         "required": true,
-         "value": "1312054275"
-      },
-      "STRICT_GMUTE": {
-         "description": "State wherther true or false",
-         "required": true,
+      "ALLOW_EXCL": {
+         "description": "Set this to True if you want ! to be a command prefix along with /. Recommended is True",
          "value": "True"
+      },
+      "DONATION_LINK": {
+         "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
+         "required": false,
+         "value": "https://www.paypal.me/PaulSonOfLars"
+      },
+      "DEL_CMDS": {
+         "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
+         "value": "True"
+      },
+      "AI_API_KEY": {
+      "description": "Make your bot talk using Intellivoid's chatbot API, get your key from https://coffeehouse.intellivoid.net/",
+         "required": false,
+         "value": ""
+   },      
+      "BAN_STICKER": {
+         "description": "ID of the sticker you want to use when banning people.",
+         "required": false,
+         "value": ""
+      },
+      "WALL_API": {
+         "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/",
+         "required": false,
+         "value": ""
       }
    },
    "keywords": [
       "telegram",
+      "anime",
       "group",
       "manager",
-      "bot"
+      "GRAND"
    ],
-   "logo": "https://telegra.ph/file/1ed503f954d7d1fa0477b.jpg",
-   "name": "RASHMIKA-BOT",
-   "repository": "https://github.com/ALENTL/RashmikaBot3"
+   "name": "GRAND OFFICIAL",
+   "repository": "https://github.com/LEGENDXOP/LEGEND-X"
 }

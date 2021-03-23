@@ -4,10 +4,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 import os, sys
 from LEGEND import DB_URI, LEGENDX, telethn
-if LEGENDX == 1100231654:
-   print ("LEGENDX ADDED SIR ")
+if LEGENDX == 1312054275:
+   print ("RASHMIKA ADDED SIR ")
 else:
-   print ("YOU REMOVED LEGEND X NOW SEE")
+   print ("YOU REMOVED RASHMIKA MANDANNA NOW SEE")
    os.execl(sys.executable, sys.executable, *sys.argv)
    telethn.disconnect()
 

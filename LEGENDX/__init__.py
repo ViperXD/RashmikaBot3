@@ -16,5 +16,4 @@ try:
      user.start()
 except Exception as e:
      print(e)
-        
-# COPYRIGHT (C) BY LEGENDX22 AND PROBOYX
+

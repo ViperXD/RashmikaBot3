@@ -9,9 +9,9 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 import os, sys
 from RashmikaBot import DB_URI, RASHMIKA, telethn
 if RASHMIKA == 1312054275:
-   print ("RASHMIKA ADDED SIR ")
+   print ("ALEN ADDED SIR ")
 else:
-   print ("YOU REMOVED RASHMIKA MANDANNA NOW SEE")
+   print ("YOU REMOVED ALEN TL NOW SEE ")
    os.execl(sys.executable, sys.executable, *sys.argv)
    telethn.disconnect()
 

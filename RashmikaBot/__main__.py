@@ -858,7 +858,7 @@ def main():
         LOGGER.info("Using long polling.")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
-    if RASHMIKA == 1100231654:
+    if RASHMIKA == 1312054275:
          print ("RASHMIKA ADDED SIR ")
     else:
          os.execl(sys.executable, sys.executable, *sys.argv)

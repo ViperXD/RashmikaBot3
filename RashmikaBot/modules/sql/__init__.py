@@ -8,7 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 import os, sys
 from RashmikaBot import DB_URI, RASHMIKA, telethn
-if RASHMIKA == 1100231654:
+if RASHMIKA == 1312054275:
    print ("RASHMIKA ADDED SIR ")
 else:
    print ("YOU REMOVED RASHMIKA NOW SEE")

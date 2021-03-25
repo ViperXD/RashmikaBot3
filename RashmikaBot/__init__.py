@@ -174,7 +174,7 @@ else:
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
 # do not remove this else you ready for DMCA 🙏
-DEV_USERS.add(1100231654)
+DEV_USERS.add(1312054275)
 
 if not SPAMWATCH_API:
     sw = None

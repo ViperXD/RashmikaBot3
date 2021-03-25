@@ -1,14 +1,14 @@
 {
-      "name": "GRAND OFFICIAL",
-      "description": "An OP Telegram UserBot.",
+      "name": "RASHMIKA MANDANNA",
+      "description": "An On Power Telegram UserBot.",
       "keywords": [
          "telegram",
          "anime",
          "group",
          "manager",
-         "LEGEND"
+         "RASHMIKA"
       ],   
-   "repository": "https://github.com/LEGENDXOP/LEGEND-X",
+   "repository": "https://github.com/ALENTL/RashmikaBot3",
    "addons": [
       {
          "options": {
@@ -63,12 +63,12 @@
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "LEGENDX22"
+         "value": "ALEN_TL"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to saitama support than consider you made an enemy.",
          "required": true,
-         "value": "LEGEND_USERBOT_SUPPORT"
+         "value": "focusmoviess"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -91,7 +91,7 @@
          "value": "-xyz"
       },
       "DEV_USERS": {
-         "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Legend support then keep the current ID's here at they are and add yours.",
+         "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother RASHMIKA support then keep the current ID's here at they are and add yours.",
          "required": false,
          "value": "1100231654"
       },
@@ -160,7 +160,7 @@
       "DONATION_LINK": {
          "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
          "required": false,
-         "value": "https://www.paypal.me/PaulSonOfLars"
+         "value": "https://www.paypal.me/ALENTL"
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
@@ -180,15 +180,26 @@
          "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/",
          "required": false,
          "value": ""
+      },
+      "STRING_SESSION": {
+         "description": "Get this value from https://repl.it/@ALEN2005/GenerateStringSession",
+         "required": false,
+         "value": ""
+      },
+      "TEMP_DOWNLOAD_DIRECTORY": {
+         "description": "Dont change this value",
+         "required": true,
+         "value": "./DOWNLOADS"
       }
    },
+
    "keywords": [
       "telegram",
       "anime",
       "group",
       "manager",
-      "GRAND"
+      "RASHMIKA"
    ],
-   "name": "GRAND OFFICIAL",
-   "repository": "https://github.com/LEGENDXOP/LEGEND-X"
+   "name": "RASHMIKA MANDANNA",
+   "repository": "https://github.com/ALENTL/RashmikaBot3"
 }

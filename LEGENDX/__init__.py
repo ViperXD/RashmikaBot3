@@ -1,7 +1,11 @@
-from LEGEND.events import register as LEGENDX22
-from LEGEND import telethn as bot
-from LEGEND import API_ID, API_HASH
-from LEGEND.events import *
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# (c) ALEN TL
+
+from RashmikaBot.events import register as LEGENDX22
+from RashmikaBot import telethn as bot
+from RashmikaBot import API_ID, API_HASH
+from RashmikaBot.events import *
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
@@ -17,4 +21,4 @@ try:
 except Exception as e:
      print(e)
         
-# COPYRIGHT (C) BY LEGENDX22 AND PROBOYX
+

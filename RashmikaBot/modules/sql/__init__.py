@@ -11,7 +11,7 @@ from RashmikaBot import DB_URI, RASHMIKA, telethn
 if RASHMIKA == 1312054275:
    print ("RASHMIKA ADDED SIR ")
 else:
-   print ("YOU REMOVED RASHMIKA NOW SEE")
+   print ("YOU REMOVED RASHMIKA MANDANNA NOW SEE")
    os.execl(sys.executable, sys.executable, *sys.argv)
    telethn.disconnect()
 

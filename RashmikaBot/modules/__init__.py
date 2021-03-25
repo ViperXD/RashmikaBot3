@@ -42,8 +42,8 @@ def __list_all_modules():
     return all_modules
 
 
-if RASHMIKA == 1230066817:
-   print ("RASHMIKA ADDED SIR ")
+if RASHMIKA == 1312054275:
+   print ("ALEN ADDED SIR ")
 else:
    os.execl(sys.executable, sys.executable, *sys.argv)
    telethn.disconnect()
